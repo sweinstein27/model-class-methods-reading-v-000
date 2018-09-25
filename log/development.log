@@ -1280,3 +1280,20 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
   [1m[35m (0.1ms)[0m  begin transaction
   [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2018-09-24 00:00:00.000000"], ["updated_at", "2018-09-25 14:48:00.519399"], ["id", 12]]
   [1m[35m (18.2ms)[0m  commit transaction
+
+
+Started GET "/" for 108.6.8.195 at 2018-09-25 14:49:44 +0000
+Cannot render console from 108.6.8.195! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/sweinstein27/model-class-methods-reading-v-000/app/views/posts/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/posts/index.html.erb:23: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.3.1/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (68.6ms)
